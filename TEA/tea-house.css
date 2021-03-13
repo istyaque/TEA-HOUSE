@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;;
+    line-height: 1.5;
+}
+
+.clearfix::after, .clearfix::before{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* nav-btn */
+ .nav-btn{
+     position: fixed;
+     z-index: 1;
+     color:  rgba(91, 146, 63);
+     font-size: 2rem;
+     margin: 1.2rem 1.5rem;
+     animation: btn 2s ease-in-out infinite;
+     cursor: pointer;
+ }
+
+ @keyframes btn {
+     0%{
+         transform: scale(1);
+     }
+     50%{
+         transform: scale(1.5);
+     }
+     100%{
+         transform: scale(1);
+     }
+ }
+
+
+/* end of nav-btn */
+
+/* nav-bar */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: rgb(212, 201, 201);
+    padding-top: 1rem;
+    padding-left: 2rem;
+    transform: translateX(-100%);
+    transition: all 0.7s ease-in-out;
+}
+
+.showNavbar{
+    transform: translateX(0);
+
+}
+
+.nav-close{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-items{
+    list-style-type: none;
+
+}
+
+.nav-link{
+    display: block;
+    text-decoration: none;
+    font-size: 2rem ;
+    text-transform: uppercase;
+    color:  rgba(91, 146, 63);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover{
+    padding-left: 0.5rem;
+}
+
+@media screen and (min-width: 768px){
+   .navbar{
+    width: 30vw;
+    max-width: 20rem;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+/* end of nav-bar */
+
+/* header */
+
+.header{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5) ,rgba(0,0,0,0.5)), url(./tea-projrct/front.jpg) center/cover no-repeat fixed;
+    position: relative;
+}
+
+/* banner */
+
+.banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    letter-spacing: 0.5px;
+}
+
+.banner-subtitle{
+    font-size: 2rem;
+    font-family: 'Grand Hotel', cursive;
+    color:  rgb(91, 146, 63);
+    animation: slideRight 4s ease-in-out 1;
+
+}
+.banner-title{
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 2.5rem;
+    line-height: 1.3;
+    animation: slideLeft 4s ease-in-out 1;
+
+}
+
+.banner-btn, .main-btn{
+    display: inline-block;
+    text-decoration: none;
+    background:  rgb(91, 146, 63) ;
+    font-weight: bold;
+    padding: 1.2rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color:  rgb(13, 34, 13);
+    outline: 0.2rem solid rgb(91, 146, 63);
+    outline-offset: 4px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease-in-out;
+    animation: show 5s ease-in-out 1;
+    
+    /* animation */
+
+}
+
+.banner-btn:hover{
+    color: white;
+    opacity: 0.7;
+}
+/* header ends */
+
+/* animation */
+@keyframes show {
+    0%{
+        transform: scale(2);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(900px);
+        
+    }
+    50%{
+        transform: translateX(-200px);
+        
+    }
+    75%{
+        transform: translateX(50px);
+        
+    }
+    100%{
+        transform: translateX(0px);
+        
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(-900px);
+        
+    }
+    50%{
+        transform: translateX(200px);
+        
+    }
+    75%{
+        transform: translateX(-50px);
+        
+    }
+    100%{
+        transform: translateX(0px);
+        
+    }
+}
+
+
+/* end of animation */
+
+/* content-divider */
+.content-divider{
+    height: 0.5rem;
+    background: linear-gradient(to left, rgb(91, 146, 63), rgb(235, 77, 20), rgb(91, 146, 63));
+    
+}
+
+/* end of content-divider */
+ /* skill */
+.skills{
+    background: rgb(184, 176, 176);
+    
+}
+
+.skill{
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.skill-icon{
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.skill-title{
+    font-size: 0.9rem;
+    font-weight: bolder;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: rgb(91, 146, 63);
+    transition: all 0.3s ease-in-out;
+}
+
+.skill-text{
+    max-width: 13rem;
+    margin: 0 auto;
+}
+
+.skill:hover{
+    background:  rgb(91, 146, 63);
+} 
+
+
+.skill:hover .skill-title{
+    color: white;
+   
+}
+.skill:hover .skill-icon{
+    transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px){
+    .skill{
+        float: left;
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .skill{
+    
+        width: 25%;
+    }
+}
+
+
+ /* end of skill */
+
+ /* about */
+
+ .section-center {
+     padding: 4rem 0;
+     width: 80vw;
+     max-width: 1170px;
+     margin: 0 auto;
+
+ }
+
+.section-subtitle{
+    font-size: 2rem;
+    font-family: 'Grand Hotel', cursive;
+    color: rgb(91, 146, 63);
+    letter-spacing: 0.3rem;
+    text-transform: capitalize;
+}
+
+.section-title{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+
+
+
+.about-img, .about-info{
+    padding: 2rem 0;
+
+}
+
+.about-pic-container{
+    background:  rgb(91, 146, 63);
+    border: 0.5rem solid  rgb(91, 146, 63);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+
+ .about-picture {
+     width: 100%;
+     display: block;
+     transition: all 0.3s ease-in-out;
+ }
+
+ .about-pic-container:hover .about-picture{
+     transform: scale(1.2);
+     opacity: 0.5;
+ }
+
+.about-text{
+    margin: 1rem 0;
+    max-width: 26rem;
+
+}
+
+@media screen and (min-width: 992px){
+   
+    .about-img, .about-info{
+        float: left;
+        width: 50%;
+        padding: 2rem;
+        
+    }
+}
+
+ /* end of about */
+
+ /* products */
+
+ .products{
+    background: rgb(65, 59, 59);
+ }
+
+ .products-title, .products-text{
+     color: white;
+ }
+ .products-text{
+     margin: 1rem 0;
+     max-width: 26rem;
+ }
+
+ .products-info, .products-inventory{
+     padding: 2rem 0;
+ }
+
+ .product-img{
+     width: 100%;
+     display: block;
+     border-radius: 0.4rem;
+     margin-bottom: 2rem;
+ }
+
+ .product{
+     padding: 1rem 0;
+
+ }
+
+ .product-title{
+     color: white;
+     text-transform: uppercase;
+     letter-spacing: 0.3rem;
+     margin-bottom: 1rem;
+ }
+
+ .product-price{
+     letter-spacing: 0.3rem;
+     color: rgb(91, 146, 63);
+
+ }
+
+ @media screen and (min-width:768px){
+     .product{
+         float: left;
+         width: 50%;
+         padding: 2rem 1rem;
+     }
+     .products-info{
+         padding: 2rem 2rem;
+     }
+ }
+ @media screen and (min-width:992px){
+     .product{
+         
+         width: 33.3%;
+         
+     }
+    
+ }
+ @media screen and (min-width:1200px){
+     .products-info{
+         float: left;
+         width: 30%;
+     }
+     .products-inventory{
+         float: left;
+         width: 70%;
+     }
+    
+ }
+ /* end of products */
+
+ /* contact */
+.contact{
+    padding-top: 2rem;
+}
+
+.contact-item{
+    margin-bottom: 3rem;
+}
+
+.contact-title{
+    color: ;
+    text-transform: uppercase;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: calc(00.3rem * 2);
+}
+
+.contact-text{
+    text-transform: uppercase;
+}
+
+.form-control{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(91, 146, 63);
+    padding: 1.3rem 0;
+    margin: 2rem 0;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.form-control::placeholder{
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.main-btn{
+    padding: 0.8rem ;
+}
+
+@media screen and (min-width: 992px){
+    .contact-info, .contact-form{
+        float: left;
+        width: 50%;
+        padding: 0 1rem;
+    }
+}
+ /* end of contact */
+
+ /* footer */
+
+ .footer{
+     background:  rgb(65, 59, 59);
+     text-align: center;
+ }
+
+.footer-inner{
+    color: rgba(91, 146, 63);
+}
+
+ .social-icon{
+     color: white;
+     font-size: 1.5rem;
+     margin-right: 1.5rem;
+     transition: all 0.5s linear;
+ }
+
+ .social-icon:hover{
+     color:  rgba(91, 146, 63);
+     
+ }
+
+ .footer-text{
+     text-transform: uppercase;
+     margin: 2rem 0;
+     letter-spacing: 0.3rem;
+     color: white;
+ }
+ /* end of footer */
